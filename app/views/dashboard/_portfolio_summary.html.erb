@@ -1,0 +1,9 @@
+<!-- app/views/dashboard/_portfolio_summary.html.erb -->
+<div class="card mb-4">
+  <div class="card-header">Portfolio Summary</div>
+  <div class="card-body">
+    <h5 class="card-title">Total Value: $ %= number_with_delimiter(current_user.total_portfolio_value) %</h5>
+    <p class="card-text">Year-to-Date Return: %= number_to_percentage(current_user.ytd_return, precision: 2) %</p>
+    <!-- Add more portfolio summary details as needed -->
+  </div>
+</div>

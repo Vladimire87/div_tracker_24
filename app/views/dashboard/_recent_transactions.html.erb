@@ -1,0 +1,14 @@
+<!-- app/views/dashboard/_recent_transactions.html.erb -->
+<div class="card mb-4">
+  <div class="card-header">Recent Transactions</div>
+  <div class="card-body">
+    <ul class="list-group">
+      % current_user.recent_transactions.each do |transaction| %
+        <li class="list-group-item">
+          %= transaction.stock.symbol % - %= transaction.action.titleize %
+          %= pluralize(transaction.shares, 'share') % @ $%= number_with_precision(transaction.price, precision: 2) %
+        </li>
+      % end %
+    </ul>
+  </div>
+</div>

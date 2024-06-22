@@ -1,0 +1,14 @@
+<!-- app/views/dashboard/_upcoming_dividends.html.erb -->
+<div class="card mb-4">
+  <div class="card-header">Upcoming Dividends</div>
+  <div class="card-body">
+    <ul class="list-group">
+      % current_user.upcoming_dividends.each do |dividend| %
+        <li class="list-group-item">
+          %= dividend.stock.symbol % - $%= number_with_precision(dividend.amount, precision: 2) %
+          on %= dividend.payment_date.strftime('%b %d, %Y') %
+        </li>
+      % end %
+    </ul>
+  </div>
+</div>
