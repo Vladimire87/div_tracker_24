@@ -1,15 +1,11 @@
 <%= render "shared/nav" %>
-<%= render 'shared/sidebar' %>
-<div class="container-fluid mt-4">
-  <h1 class="mb-4">Dashboard</h1>
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-8">
-      <%= render 'dashboard/portfolio_summary' %>
-      <%= render 'dashboard/recent_transactions' %>
-    </div>
-    <div class="col-md-4">
-      <%= render 'dashboard/upcoming_dividends' %>
-      <%= render 'dashboard/quick_actions' %>
+    <%= render 'shared/sidebar' %>
+    <!-- Main content will go here -->
+    <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <h1>Welcome to the Dashboard</h1>
+      <p>This is your main content area.</p>
     </div>
   </div>
 </div>
